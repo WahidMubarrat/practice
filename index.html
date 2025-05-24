@@ -1,58 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Simple Meal Planner</title>
-  <link rel="stylesheet" href="styles.css" />
+    <title>Fitness App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Meal Planner</h1>
-    <form id="meal-form">
-      <input type="text" id="meal-name" placeholder="Meal Name" required />
-      <input type="number" id="meal-calories" placeholder="Calories" min="0" required />
-      <button type="submit">Add Meal</button>
-    </form>
-
-    <h2>Meals List</h2>
-    <ul id="meals-list"></ul>
-
-    <div class="total-calories">
-      Total Calories: <span id="total-calories">0</span>
+    <div class="container">
+        <h1>Welcome to Fitness App</h1>
+        <div class="buttons">
+            <a href="login.html" class="btn login-btn">Login</a>
+            <a href="signup.html" class="btn signup-btn">Sign Up</a>
+        </div>
     </div>
-  </div>
-
-  <script>
-    const form = document.getElementById('meal-form');
-    const mealNameInput = document.getElementById('meal-name');
-    const mealCaloriesInput = document.getElementById('meal-calories');
-    const mealsList = document.getElementById('meals-list');
-    const totalCaloriesEl = document.getElementById('total-calories');
-
-    let totalCalories = 0;
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const name = mealNameInput.value.trim();
-      const calories = parseInt(mealCaloriesInput.value);
-
-      if (name && !isNaN(calories) && calories >= 0) {
-        // Create list item
-        const li = document.createElement('li');
-        li.textContent = `${name} - ${calories} cal`;
-
-        mealsList.appendChild(li);
-
-        // Update total calories
-        totalCalories += calories;
-        totalCaloriesEl.textContent = totalCalories;
-
-        // Reset form
-        form.reset();
-      }
-    });
-  </script>
 </body>
 </html>
