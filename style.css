@@ -1,45 +1,49 @@
-/* Shared styles for all pages */
+/* Body styling for vertical stacking and alignment */
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #f0fdf4; /* soft green background */
+    background-color: #f0fdf4; /* Soft green */
     margin: 0;
-    padding: 20px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
 }
 
-/* Page header with welcome message */
+/* Header for welcome message */
 .page-header {
     width: 100%;
     text-align: center;
-    padding: 40px 20px 10px;
-    background-color: #e8f5e9; /* soft green banner */
-    color: #2e7d32; /* deeper green for text */
-    font-size: 24px;
-    font-weight: bold;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    border-bottom: 1px solid #c8e6c9;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-.highlight {
-    color: #43a047; /* leafy green for emphasis */
+.page-header h1 {
+    color: #2e7d32; /* Dark green */
+    font-size: 2rem;
+    margin: 0;
 }
 
-/* Container styling */
+/* Container styling for form/buttons/card */
 .container {
     background: #ffffff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 128, 0, 0.1); /* green tint shadow */
+    box-shadow: 0 4px 12px rgba(0, 128, 0, 0.1); /* Green tint shadow */
     width: 100%;
     max-width: 400px;
     text-align: center;
-    margin-top: 30px;
 }
 
-/* Generic button */
+/* Buttons section (used in index and dashboard) */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Generic button styling */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -49,17 +53,18 @@ body {
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 /* Login and Signup Buttons */
 .login-btn {
-    background: #4CAF50; /* healthy green */
+    background: #4CAF50; /* Healthy green */
     color: white;
 }
 
 .signup-btn {
-    background: #FFECB3; /* soft orange */
-    color: #5D4037; /* brownish text */
+    background: #FFECB3; /* Soft orange */
+    color: #5D4037; /* Brownish text */
 }
 
 /* Form input styling */
@@ -72,7 +77,7 @@ body {
     background-color: #f9fff9;
 }
 
-/* Back link */
+/* Back link under forms */
 .back-link {
     display: block;
     margin-top: 20px;
@@ -80,7 +85,7 @@ body {
     font-size: 0.95em;
 }
 
-/* Dashboard button area */
+/* Dashboard layout */
 .dashboard-actions {
     display: flex;
     flex-direction: column;
@@ -90,19 +95,17 @@ body {
     gap: 16px;
 }
 
-/* Dashboard buttons */
+/* Dashboard button styling */
 .dashboard-actions .btn {
     width: 220px;
     padding: 12px 20px;
     font-size: 16px;
-    background-color: #66bb6a; /* leafy green */
+    background-color: #66bb6a;
     color: white;
     border: none;
     border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .dashboard-actions .btn:hover {
-    background-color: #388e3c; /* darker green on hover */
+    background-color: #388e3c;
 }
