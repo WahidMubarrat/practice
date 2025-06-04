@@ -16,6 +16,12 @@ body {
     padding: 20px;
 }
 
+/* Welcome text on index */
+.page-header{
+ margin-bottom: 40px;
+    font-size: 2.8rem;
+    color: #2e7d32;
+}
 /* Centered container box */
 .container {
     background: #ffffff;
@@ -27,12 +33,6 @@ body {
     text-align: center;
 }
 
-/* Welcome text on index */
-h1 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-    color: #2e7d32;
-}
 
 /* Form styles */
 .auth-form input {
