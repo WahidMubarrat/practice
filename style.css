@@ -1,111 +1,166 @@
-/* Body styling for vertical stacking and alignment */
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f0fdf4; /* Soft green */
+/* Reset */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0fdf4;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-/* Header for welcome message */
-.page-header {
-    width: 100%;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-.page-header h1 {
-    color: #2e7d32; /* Dark green */
-    font-size: 2rem;
-    margin: 0;
-}
-
-/* Container styling for form/buttons/card */
+/* Centered container box */
 .container {
     background: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 128, 0, 0.1); /* Green tint shadow */
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 128, 0, 0.1);
     width: 100%;
     max-width: 400px;
     text-align: center;
 }
 
-/* Buttons section (used in index and dashboard) */
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
+/* Welcome text on index */
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #2e7d32;
 }
 
-/* Generic button styling */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-/* Login and Signup Buttons */
-.login-btn {
-    background: #4CAF50; /* Healthy green */
-    color: white;
-}
-
-.signup-btn {
-    background: #FFECB3; /* Soft orange */
-    color: #5D4037; /* Brownish text */
-}
-
-/* Form input styling */
+/* Form styles */
 .auth-form input {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #c8e6c9;
-    border-radius: 5px;
+    border-radius: 6px;
     background-color: #f9fff9;
+    font-size: 1rem;
 }
 
-/* Back link under forms */
-.back-link {
-    display: block;
-    margin-top: 20px;
-    color: #689f38;
-    font-size: 0.95em;
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-/* Dashboard layout */
+/* Specific buttons */
+.login-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.signup-btn {
+    background-color: #ffe082;
+    color: #4e342e;
+}
+
+/* Dashboard button panel */
 .dashboard-actions {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 40px auto;
     gap: 16px;
+    margin-top: 20px;
 }
 
-/* Dashboard button styling */
 .dashboard-actions .btn {
     width: 220px;
-    padding: 12px 20px;
-    font-size: 16px;
     background-color: #66bb6a;
     color: white;
-    border: none;
-    border-radius: 6px;
 }
 
 .dashboard-actions .btn:hover {
     background-color: #388e3c;
+}
+
+/* Back link */
+.back-link {
+    display: block;
+    margin-top: 25px;
+    font-size: 0.95em;
+    color: #2e7d32;
+    text-decoration: none;
+}
+
+/* Progress bar */
+.progress-bar {
+    background-color: #e0f2f1;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px 0 20px;
+    height: 24px;
+}
+
+.progress-fill {
+    background-color: #66bb6a;
+    height: 100%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 24px;
+}
+
+/* Meal plan inputs */
+.meal-form input,
+.meal-form select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #a5d6a7;
+}
+
+/* Meal form button */
+.meal-form button {
+    background-color: #4caf50;
+    color: white;
+    width: 100%;
+}
+
+/* Option selector (for update info) */
+.option-select {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option-select button {
+    background-color: #81c784;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.option-select button.active {
+    background-color: #388e3c;
+}
+
+/* Hide class */
+.hidden {
+    display: none;
+}
+
+/* Form section (update info) */
+.form-section input {
+    margin-bottom: 15px;
 }

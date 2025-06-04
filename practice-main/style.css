@@ -1,0 +1,111 @@
+/* Body styling for vertical stacking and alignment */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0fdf4; /* Soft green */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header for welcome message */
+.page-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.page-header h1 {
+    color: #2e7d32; /* Dark green */
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Container styling for form/buttons/card */
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 128, 0, 0.1); /* Green tint shadow */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Buttons section (used in index and dashboard) */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Generic button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Login and Signup Buttons */
+.login-btn {
+    background: #4CAF50; /* Healthy green */
+    color: white;
+}
+
+.signup-btn {
+    background: #FFECB3; /* Soft orange */
+    color: #5D4037; /* Brownish text */
+}
+
+/* Form input styling */
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #c8e6c9;
+    border-radius: 5px;
+    background-color: #f9fff9;
+}
+
+/* Back link under forms */
+.back-link {
+    display: block;
+    margin-top: 20px;
+    color: #689f38;
+    font-size: 0.95em;
+}
+
+/* Dashboard layout */
+.dashboard-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    gap: 16px;
+}
+
+/* Dashboard button styling */
+.dashboard-actions .btn {
+    width: 220px;
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+.dashboard-actions .btn:hover {
+    background-color: #388e3c;
+}

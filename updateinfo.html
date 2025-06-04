@@ -1,14 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Update Info</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Update Info | Fitness App</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .option-select {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .option-select button {
+      background-color: #81c784;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .option-select button.active {
+      background-color: #388e3c;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .form-section input {
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>Update Your Info</h1>
-    <p>Update your profile and fitness goals here.</p>
+    <h1>Update Info</h1>
+
+    <div class="option-select">
+      <button id="usernameBtn" class="active">Change Username</button>
+      <button id="passwordBtn">Change Password</button>
+    </div>
+
+    <form class="auth-form" id="updateForm">
+      <div id="usernameSection" class="form-section">
+        <input type="text" placeholder="New Username" required>
+      </div>
+
+      <div id="passwordSection" class="form-section hidden">
+        <input type="password" placeholder="New Password" required>
+      </div>
+
+      <input type="password" placeholder="Current Password" required>
+
+      <button type="submit" class="btn">Update</button>
+    </form>
+
     <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
   </div>
+
+  <script>
+    const usernameBtn = document.getElementById("usernameBtn");
+    const passwordBtn = document.getElementById("passwordBtn");
+    const usernameSection = document.getElementById("usernameSection");
+    const passwordSection = document.getElementById("passwordSection");
+
+    usernameBtn.addEventListener("click", () => {
+      usernameBtn.classList.add("active");
+      passwordBtn.classList.remove("active");
+      usernameSection.classList.remove("hidden");
+      passwordSection.classList.add("hidden");
+    });
+
+    passwordBtn.addEventListener("click", () => {
+      passwordBtn.classList.add("active");
+      usernameBtn.classList.remove("active");
+      passwordSection.classList.remove("hidden");
+      usernameSection.classList.add("hidden");
+    });
+  </script>
 </body>
 </html>
